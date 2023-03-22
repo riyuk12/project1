@@ -1,0 +1,264 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right,#9c27b0,#8ecdff);
+}
+section{
+    height: 100vh;
+    width:100vw;
+}
+
+/*NAVBAR*/
+nav{
+    width:80%;
+    position: sticky;
+    margin: 20px auto;
+    z-index:1;
+    display:flex;
+    align-items: center;
+}
+
+.logo{
+    flex-basis:20% ;
+}
+
+.logo img{
+    width:150px;
+}
+
+.links{
+    flex:1;
+    text-align: right;
+}
+
+.links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.links a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*circle rotate*/
+.information{
+    width: 1000px;
+    height: 1000px;
+    top:50%;
+    position:absolute;
+    transform: translateY(-50%);
+}
+
+#circle{
+    width: 1000px;
+    height: 1000px;
+    top:0;
+    position:absolute;
+    border-radius: 50%;
+    background:transparent;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.feature{
+    position:absolute;
+    color: #fff;
+    display: flex;
+    
+}
+
+.feature div{
+    margin-left: 30px;
+}
+
+.feature img{
+    width:70px;
+}
+
+.one{
+    top:450px;
+    right:50px;
+}
+
+.two{
+    top:150px;
+    left:350px;
+    transform: rotate(-90deg);
+}
+.three{
+    bottom:450px;
+    left:50px;
+    transform: rotate(-180deg);
+}
+.four{
+    bottom:150px;
+    right:350px;
+    transform: rotate(-270deg);
+}
+
+.mobile{
+    width:200px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid #fff;
+    border-left: 500px solid #fff;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #fff;
+    position: absolute;
+    z-index: 1;
+}
+
+/*circle controller*/
+.controls{
+    position: absolute;
+    right:10%;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.controls h1{
+    color: #fff;
+    margin: 15px 0;
+    font-size: 25px;
+
+}
+
+.controls img{
+    width: 75px;
+}
+
+#upBtn{
+    cursor: pointer;
+}
+
+#downBtn{
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+
+
+/*About phone section*/
+
+.phone{
+    height: 75vh;
+    width: 100vw;
+}
+
+.ctn{
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+}
+
+
+/*first card*/
+.card1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height:100%;
+}
+
+.textblock{
+    height: 80%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.textblock h1{
+    font-size: 30px;
+}
+.textblock p{
+    font-size: large;
+}
+
+.card1img{
+    height: 80%;
+    min-height: 200px;
+}
+
+/*card2*/
+
+.card2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.leftblock{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10%;
+    width: 30%;
+}
+
+
+/*use grid for position*/
+.text:nth-child(3n){
+    align-self: flex-end;
+    margin: 0 10px;
+    font-size: 25px;
+    
+}
+
+.card3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/*card container section*/
+.card1{
+    position: absolute;
+    z-index: 3;
+    opacity: 1;
+    transition: 1s;
+}
+.card2{
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: 1s;
+}
+.card3{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+}
