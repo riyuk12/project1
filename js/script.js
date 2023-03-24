@@ -8,13 +8,16 @@ var card1=document.getElementById("card1");
 var card2=document.getElementById("card2");
 var card3=document.getElementById("card3");
 
-var sliderBtn1=document.getElementById("sbtn1");
-var sliderBtn2=document.getElementById("sbtn2");
-var sliderBtn3=document.getElementById("sbtn3");
+var sliderBtn1=document.getElementById("slider1");
+var sliderBtn2=document.getElementById("slider2");
+var sliderBtn3=document.getElementById("slider3");
 
 var collection=[card1,card2,card3];
 
-var count=0;
+
+
+
+
 
 upBtn.onclick =function(){
     rotateSum=rotateValue+"rotate(-90deg)";
@@ -34,13 +37,21 @@ downBtn.onclick =function(){
 
 
 sliderBtn1.onclick =function(){
-    sliderBtn1.style.background="whitesmoke";
+    card1.style.opacity="1";
+    card2.style.opacity="0";
+    card3.style.opacity="0";
+
+    
 }
 
 sliderBtn2.onclick =function(){
-    sliderBtn2.style.background="whitesmoke";
+    card2.style.opacity="1";
+    card1.style.opacity="0";
+    card3.style.opacity="0";
 }
 
 sliderBtn3.onclick =function(){
-    sliderBtn3.style.background="whitesmoke";
+    card3.style.opacity="1";
+    card2.style.opacity="0";
+    card1.style.opacity="0";
 }
