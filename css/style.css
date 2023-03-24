@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 .main{
@@ -58,6 +59,7 @@ nav{
     top:50%;
     position:absolute;
     transform: translateY(-50%);
+    overflow: hidden;
 }
 
 #circle{
@@ -108,7 +110,11 @@ nav{
 }
 
 .mobile{
-    width:200px;
+    
+
+    height: 50%;
+    max-height: 60%;
+    min-height: 30%;
     position: absolute;
     top: 50%;
     left: 35%;
@@ -162,14 +168,109 @@ nav{
 /*About phone section*/
 
 .phone{
-    height: 75vh;
-    width: 100vw;
-}
-
-.ctn{
-    height: 75vh;
+    height: 80vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
+    background:linear-gradient(0deg, #b8dfff,#ddc8ff);
+    overflow: hidden;
+    
+    
+}
+
+/*blob*/
+
+.blob{
+    position: absolute;
+    z-index: 0;
+    width: 500px;
+    height: 500px;
+    background: #80aae4;
+    animation: move 25s infinite alternate;
+    overflow: hidden;
+    
+}
+
+.inblob{
+    position: relative;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    background: #e7c0f7;
+    animation: move2 25s infinite alternate;
+    filter:blur(100px);
+}
+
+@keyframes move {
+    from{
+        transform: translate(-100px,10px) rotate(90deg);
+        border-radius: 50% 76% 35% 65% / 50% 36% 64% 73%;
+    }
+    to{
+        transform: translate(500px,100px) rotate(10deg);
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+    
+}
+
+@keyframes move2 {
+    from{
+        transform: translate(-100px,50px) rotate(180deg);
+        border-radius: 50% 76% 35% 65% / 50% 36% 64% 73%;
+    }
+    to{
+        transform: translate(350px,200px) rotate(70deg);
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+    
+}
+
+
+/*slider*/
+
+.slider{
+    top: 70vh;
+    height: 5vh;
+    width: 10vw;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    
+    gap: 2%;
+    position: relative;
+    z-index: 4;
+    align-items: center;
+
+    
+
+    border-radius: 15px;
+    
+    background: #e0e0e05f;
+    box-shadow:  5px 5px 14px #bababa,
+                -5px -5px 14px #ffffff;
+ 
+}
+
+.slider-btn:hover{
+    height: 3vh;
+    width: 3vh;
+    background:linear-gradient(180deg,#d383e1,#c8e6ff);
+    border-radius: 50%;
+    transition: 0.3s ease all;
+    border:none ;
+    
+}
+
+.slider-btn{
+    height: 3vh;
+    width: 3vh;
+    background: linear-gradient(180deg,#d383e100,#c8e6ff00);
+    border-color: whitesmoke;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+    
 }
 
 
@@ -184,11 +285,19 @@ nav{
 }
 
 .textblock{
-    height: 80%;
+    height: auto;
+    padding: 3% 2%;
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+
+    border-radius: 1rem;
+    
+    background: #ffffff70;
+    box-shadow:  5px 5px 14px #bababa,
+                -5px -5px 14px #ffffff;
     
 }
 
@@ -250,16 +359,19 @@ nav{
     z-index: 3;
     opacity: 1;
     transition: 1s;
+    height: 70%;
 }
 .card2{
     position: absolute;
     z-index: 2;
     opacity: 0;
     transition: 1s;
+    height: 70%;
 }
 .card3{
     position: absolute;
     z-index: 1;
     opacity: 0;
     transition: 1s;
+    height: 70%;
 }
