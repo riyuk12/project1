@@ -257,6 +257,7 @@ nav{
     background:linear-gradient(180deg,#d383e1,#c8e6ff);
     border-radius: 50%;
     transition: 0.3s ease all;
+    border-color: whitesmoke;
     border:none ;
     
 }
