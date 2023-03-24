@@ -37,9 +37,9 @@ downBtn.onclick =function(){
 
 
 sliderBtn1.onclick =function(){
-    card1.style.opacity="1";
+    card1.style.opacity="0";
     card2.style.opacity="0";
-    card3.style.opacity="0";
+    card3.style.opacity="1";
 
     
 }
@@ -51,7 +51,7 @@ sliderBtn2.onclick =function(){
 }
 
 sliderBtn3.onclick =function(){
-    card3.style.opacity="1";
+    card3.style.opacity="0";
     card2.style.opacity="0";
-    card1.style.opacity="0";
+    card1.style.opacity="1";
 }
